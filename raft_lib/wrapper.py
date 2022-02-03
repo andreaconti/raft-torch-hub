@@ -40,7 +40,7 @@ class RAFTWrapper(_RAFT):
                     ZipFile(f).extractall(models_root)
                 os.remove(models_root / "models.zip")
 
-                path = models_root / f"models/raft-{dataset}.pth"
-                self.load_state_dict(
-                    {".".join(k.split(".")[1:]): v for k, v in torch.load(path).items()}
-                )
+            path = models_root / f"models/raft-{dataset}.pth"
+            self.load_state_dict(
+                {".".join(k.split(".")[1:]): v for k, v in torch.load(path).items()}
+            )
