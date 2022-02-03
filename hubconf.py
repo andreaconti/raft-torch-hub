@@ -8,6 +8,7 @@ dependencies = [
 ]
 
 import typing as _t
+from lib.wrapper import RAFTWrapper as _RAFTWrapper
 
 
 def raft(
@@ -37,7 +38,6 @@ def raft(
     >>> model = raft(pretrained=True, dataset="kitti")
     >>> flow, flow_up = model(img_1, img_2, n_iters=12, flow_init=None, test_mode=True)
     """
-    from lib.wrapper import RAFT
 
-    model = RAFT(dataset if pretrained else None)
+    model = _RAFTWrapper(dataset if pretrained else None)
     return model
