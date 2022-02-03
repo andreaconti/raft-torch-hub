@@ -1,0 +1,21 @@
+name: raft
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - cudatoolkit=11.3
+  - pytorch
+  - torchvision
+  - matplotlib
+  - scipy
+  - requests
+  - tqdm
+  - ipython
+  - black
+  - isort
+  - pip
+
+  - pip:
+    - opencv-python
