@@ -22,10 +22,13 @@ class RAFTWrapper(_RAFT):
     def __init__(
         self,
         dataset: Literal[None, "kitti", "sintel", "chairs", "small", "things"] = None,
+        mixed_precision: bool = False,
     ):
         super().__init__(
             Namespace(
-                small=dataset == "small", mixed_precision=False, alternate_corr=False
+                small=dataset == "small",
+                mixed_precision=mixed_precision,
+                alternate_corr=False,
             )
         )
         if dataset is not None:
