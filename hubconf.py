@@ -8,7 +8,7 @@ dependencies = [
 ]
 
 import typing as _t
-from lib.wrapper import RAFTWrapper as _RAFTWrapper
+from raft_lib.wrapper import RAFTWrapper as _RAFTWrapper
 
 
 def raft(

@@ -1,4 +1,4 @@
-from lib.raft import RAFT as _RAFT
+from raft_lib.raft import RAFT as _RAFT
 import os
 from typing import Literal
 from pathlib import Path

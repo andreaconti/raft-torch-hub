@@ -1,6 +1,6 @@
 import torch
 import torch.nn.functional as F
-from lib.utils import bilinear_sampler
+from raft_lib.utils import bilinear_sampler
 
 
 class CorrBlock:
