@@ -7,13 +7,12 @@ dependencies = [
     "tqdm",
 ]
 
-from typing import Literal
-from lib.wrapper import RAFT
+import typing as _t
 
 
 def raft(
     pretrained: bool = False,
-    dataset: Literal["kitti", "sintel", "chairs", "small", "things"] = "sintel",
+    dataset: _t.Literal["kitti", "sintel", "chairs", "small", "things"] = "sintel",
 ):
     """
     RAFT model as in https://github.com/princeton-vl/RAFT, with the
@@ -38,5 +37,7 @@ def raft(
     >>> model = raft(pretrained=True, dataset="kitti")
     >>> flow, flow_up = model(img_1, img_2, n_iters=12, flow_init=None, test_mode=True)
     """
+    from lib.wrapper import RAFT
+
     model = RAFT(dataset if pretrained else None)
     return model
